@@ -15,4 +15,4 @@ COPY . .
 RUN npm run build
 
 # Entrypoint for MCP server
-ENTRYPOINT ["node", "dist/index.js"]
+CMD ["bun", "run", "dist/index.js", "--transport", "http", "--port", "3100", "--host", "0.0.0.0"]
